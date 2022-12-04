@@ -25,10 +25,11 @@ registerPlugins(app)
 
 // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
 const routes = setupLayouts(generatedRoutes)
+console.log('routes', routes)
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes,
-  })
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+})
 app.use(router)
 
 app.mount('#app')
